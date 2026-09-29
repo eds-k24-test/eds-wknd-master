@@ -1,0 +1,107 @@
+.header-utility {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 1.5rem;
+    font-size: 0.875rem;
+    padding: 0.5rem 1rem;
+}
+
+/* Authentication Styling */
+.header-utility-auth {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.header-utility-auth .auth-signout {
+    display: none;
+}
+
+.header-utility-auth.authenticated .auth-signin {
+    display: none;
+}
+
+.header-utility-auth.authenticated .auth-signout {
+    display: inline-block;
+}
+
+.header-utility-auth a {
+    text-decoration: none;
+    font-weight: 500;
+}
+
+/* Language Navigation Styling */
+.header-utility-lang {
+    position: relative;
+}
+
+.header-utility-lang .lang-toggle-btn {
+    background: transparent;
+    border: 1px solid #d1d5db;
+    border-radius: 4px;
+    padding: 0.25rem 0.6rem;
+    font-size: 0.8125rem;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+}
+
+.header-utility-lang .lang-toggle-btn::after {
+    content: '▾';
+    font-size: 0.75rem;
+}
+
+.header-utility-lang .lang-dropdown {
+    display: none;
+    position: absolute;
+    top: calc(100% + 6px);
+    right: 0;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 6px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    padding: 0.75rem 1rem;
+    min-width: 180px;
+    max-height: 320px;
+    overflow-y: auto;
+    z-index: 50;
+}
+
+.header-utility-lang .lang-dropdown.is-open {
+    display: block;
+}
+
+.header-utility-lang .lang-region-title {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #6b7280;
+    text-transform: uppercase;
+    margin-top: 0.5rem;
+    margin-bottom: 0.25rem;
+}
+
+.header-utility-lang .lang-region-group:first-child .lang-region-title {
+    margin-top: 0;
+}
+
+.header-utility-lang ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.header-utility-lang ul li a {
+    display: block;
+    padding: 0.2rem 0;
+    color: #374151;
+    text-decoration: none;
+}
+
+.header-utility-lang ul li a.is-active,
+.header-utility-lang ul li a:hover {
+    font-weight: 600;
+    color: #111827;
+}
